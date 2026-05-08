@@ -9,9 +9,8 @@ app.use(express.json());
 
 
 // GET endpoint required by the assignment
-app.get('/api/data', (req, res) => {
-    res.status(200).json(frontendData);
-});
+app.get('/', showHomePage);
+// router.get('/', showHomePage);
 
 app.listen(PORT, () => {
     console.log(`Backend running at http://localhost:${PORT}`);
